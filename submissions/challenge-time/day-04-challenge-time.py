@@ -2,7 +2,7 @@
 
 # Starting the game
 print("Welcome to the rock-paper-scissor game!")
-print("Instruction: Choose one of the choices (Rock/Paper/Scissors) to you feel would defeat your opponent. Good luck!")
+print("Instruction: Choose one of the choices (Rock/Paper/Scissors) you feel would defeat your opponent. Good luck!")
 
 # Prompting the user for their choices
 player1 = input("Player 1: ")
