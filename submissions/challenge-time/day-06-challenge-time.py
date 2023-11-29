@@ -4,12 +4,12 @@
 num = int(input("Limit: "))
 
 # For loop
-for i in range(num):
-    if (i + 1) % 3 == 0 and (i + 1) % 5 == 0:
+for i in range(1, num + 1):
+    if i % 3 == 0 and i % 5 == 0:
         print("FizzBuzz!")
-    elif (i + 1) % 3 == 0:
+    elif i % 3 == 0:
         print("Fizz")
-    elif (i + 1) % 5 == 0:
+    elif i % 5 == 0:
         print("Buzz")
     else:
-        print(i + 1)
+        print(i)
