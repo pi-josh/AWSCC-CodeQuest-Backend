@@ -73,16 +73,17 @@ def menu():
         # Prompt the user for their choice
         choice = input("Enter the number of your choice: ")
         
-        if choice == '1':
-            add_items()
-        elif choice == '2':
-            view_items()
-        elif choice == '3':
-            remove_items()
-        elif choice == '4':
-            return
-        else:
-            print("\n\n\t\t\tInvalid input! Please try again...\n\n")
+        match choice:
+            case '1':
+                add_items()
+            case '2':
+                view_items()
+            case '3':
+                remove_items()
+            case '4':
+                return
+            case _:
+                print("\n\n\t\t\tInvalid input! Please try again...\n\n")
 
 
 # To welcome the customer
