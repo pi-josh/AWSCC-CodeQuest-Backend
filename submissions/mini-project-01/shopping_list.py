@@ -1,5 +1,7 @@
 # Mini Project: Basic Shopping List Program in Python
 
+import sys
+
 # Variable to store the items
 shopping_list = []
 
@@ -12,21 +14,30 @@ def main():
 def reading_file():
     global shopping_list
     shopping_list = []
-    with open('shopping_list.txt', 'r') as file:
-        items = file.readlines()
-        for item in items:
-            item = item.strip()
-            shopping_list.append(item)
+    
+    try:
+        with open('shopping_list.txt', 'r') as file:
+            items = file.readlines()
+            for item in items:
+                item = item.strip()
+                shopping_list.append(item)
+    except FileNotFoundError as e:
+        print("ERROR:", e)
+        sys.exit()
             
 
 def writing_file(product):
-    with open('shopping_list.txt', 'w') as file:
-        for item in shopping_list:
-            if product == item:
-                print(f"\n\n\t\t\t\t{item} has been removed from your shopping list.\n\n")
-                continue
-            else:
-                file.write(item + "\n")
+    try:
+        with open('shopping_list.txt', 'w') as file:
+            for item in shopping_list:
+                if product == item:
+                    print(f"\n\n\t\t\t\t{item} has been removed from your shopping list.\n\n")
+                    continue
+                else:
+                    file.write(item + "\n")
+    except FileNotFoundError as e:
+        print("ERROR:", e)
+        sys.exit()
             
 
 def add_items():
