@@ -1,12 +1,12 @@
 class User:
-    def __init__(self, username, password, website):
-        self._username = username
+    def __init__(self, email, password, website):
+        self._email = email
         self._password = password
         self._website = website
     
     
-    def get_username(self):
-        return self._username
+    def get_email(self):
+        return self._email
     
     
     def get_password(self):
@@ -17,8 +17,8 @@ class User:
         return self._website
     
     
-    def set_username(self, username):
-        self._username = username
+    def set_email(self, email):
+        self._email = email
         
     
     def set_password(self, password):
